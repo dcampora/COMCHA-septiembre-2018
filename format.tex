@@ -1,0 +1,80 @@
+\mode<presentation>
+{
+  \usetheme{metropolis}
+  \usecolortheme{default}
+  \usefonttheme{default}
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+}
+
+\titlegraphic{
+  \includegraphics[height=25pt]{CERN-logo}\quad
+  \includegraphics[height=25pt]{us}\quad
+  \includegraphics[height=25pt]{logo_lpnhe}\quad
+  \includegraphics[height=25pt]{logo_nikhef}\quad
+  \includegraphics[height=25pt]{logo_ufrj}\quad
+  \includegraphics[height=25pt]{IGFAE_1}\quad
+  \includegraphics[height=25pt]{logo_lasalle}
+}
+
+\makeatletter
+\setbeamertemplate{title page}{
+  \begin{minipage}[b][\paperheight]{\textwidth}
+    \vfill%
+    \ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+    \ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+    \usebeamertemplate*{title separator}
+    \ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+    \ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+    \ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+    \vfill
+    \ifx\inserttitlegraphic\@empty\else\inserttitlegraphic\fi
+    \vspace*{1cm}
+  \end{minipage}
+}
+\makeatother
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{eso-pic}
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{dirtytalk}
+\usepackage{xspace}
+\usepackage{tikz}
+\usepackage{fancyvrb}
+
+\usetikzlibrary{positioning}
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+\captionsetup[subfigure]{labelformat=empty}
+
+\title{Brief update on projects}
+\author{Daniel Hugo C\'ampora P\'erez\\dcampora@cern.ch}
+\institute{Universidad de Sevilla\\CERN}
+\date{COMCHA, 12th September, 2018}
+
+\graphicspath{{images/}}
+
+\newcommand{\etal}{\textit{et~al.}\xspace}
+
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\apptocmd{\frame}{}{\justifying}{}
+
+\setlength{\parskip}{1em}
+
+\definecolor{cambridgered}{HTML}{A30100}
+\captionsetup[figure]{labelfont={color=cambridgered}}
+
+\definecolor{orange}{HTML}{F15623}
+\newcommand{\colorhref}[3][orange]{\href{#2}{\color{#1}{#3 (\url{#2})}}}
+
+\setbeamercolor{background canvas}{bg=white}
+
+%\newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{
+%\put(\LenToUnit{0.88\paperwidth},\LenToUnit{0.86\paperheight}){#1}}}
+%\AddToShipoutPictureFG{
+%  \AtPagemyUpperLeft{{\includegraphics[width=1.5cm,keepaspectratio]{icscBackground.png}}}
+%}

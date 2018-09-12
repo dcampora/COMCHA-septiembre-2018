@@ -1,0 +1,68 @@
+\section{Backup}
+
+\begin{frame}{GPU cost benefit analysis}
+\begin{tiny}
+Assumptions:
+\vspace{-10pt}
+\begin{itemize}
+\item 2000 Boxes @ 3000 CHF for HLT1 without GPU
+\item 480 GPUs @ 700 CHF for Velo Tracking (42\% of HLT1) 
+\item GPUs idle when no beam (70\% of time)
+\end{itemize}
+
+No GPUs: 2000 Box Years for HLT1
+\vspace{-10pt}
+\begin{itemize}
+\item For every year:
+\item Use only 0.3 x 2000 = 600 Box Years for HLT1 (Hubner factor)
+\item 1400 Box Years left for HLT2/Offline processing
+\end{itemize}
+
+With GPUs: money for 1880 Boxes
+\vspace{-10pt}
+\begin{itemize}
+\item For every year:
+\item Use 0.58 x 600 = 348 Box Years for HLT1 
+\item 1532 Box Years left for HLT2/Offline processing
+\item Approx. 10\% more CPU time for other stuff, even if we idle GPUs 70\% of the time (we won’t)
+\end{itemize}
+
+Additional Benefit:
+\vspace{-10pt}
+\begin{itemize}
+\item (0.3 x 1880) – 348 = 216 Box years of HLT2 while HLT1 is running
+11\% reduction in effective HLT1 to disk rate - fewer disks to buffer spikes
+\item Cost impact currently not determined, probably $>$ 11\% disk space reduction
+\end{itemize}
+\end{tiny}
+\end{frame}
+
+
+\begin{frame}{GPU cost benefit analysis - Overheads}
+\begin{tiny}
+Need slot for GPU
+
+Current Baseline: No additional cost overhead
+\vspace{-10pt}
+\begin{itemize}
+\item GPU in EB
+\item EB baseline has 4 slots, 3 are occupied
+\item 480 EBs $\times$ 65 kHz $>$ 30 MHz
+\item One GPU/EB
+\end{itemize}
+
+Distributed EB:
+\vspace{-10pt}
+\begin{itemize}
+\item Need approx. 60 GPU Boxes with 8 GPUs each
+\item Re-used machines from commission phase (also around 60 boxes)
+\end{itemize}
+
+High Density EB:
+\vspace{-10pt}
+\begin{itemize}
+\item Would currently save 250 kCHF in EB network
+\item Only possible with GPU if PCIe Gen 4 available (likely)
+\end{itemize}
+\end{tiny}
+\end{frame}

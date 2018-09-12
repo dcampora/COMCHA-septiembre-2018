@@ -1,0 +1,69 @@
+\section{Status}
+
+\begin{frame}[fragile]{Velo tracking - Physics and performance}
+Search by triplet (minbias):
+\begin{Verbatim}[fontsize=\tiny]
+TrackChecker output    :      8058/   246296   3.27% (  2.82%) ghosts
+Velo                   :    215012/   242881  88.53% ( 88.99%),      2215 (  0.52%) clones, hit eff  97.28% pur  99.02%
+Long                   :     65408/    67648  96.69% ( 96.96%),       643 (  0.49%) clones, hit eff  98.13% pur  99.11%
+Long, p > 5 GeV        :     41907/    42621  98.32% ( 98.52%),       377 (  0.45%) clones, hit eff  98.40% pur  99.11%
+Long strange           :      2860/     3294  86.82% ( 87.68%),        23 (  0.40%) clones, hit eff  98.01% pur  97.67%
+Long strange, p > 5 GeV:      1458/     1601  91.07% ( 91.31%),         6 (  0.21%) clones, hit eff  98.63% pur  97.61%
+Long from B            :       105/      107  98.13% ( 97.20%),         0 (  0.00%) clones, hit eff  98.54% pur  99.02%
+Long from B, p > 5 GeV :        67/       67 100.00% (100.00%),         0 (  0.00%) clones, hit eff  98.39% pur  98.82%
+\end{Verbatim}
+
+Performance:
+\begin{itemize}
+\item GTX 1080 Ti: 84 kHz
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Velo UT - Physics and performance}
+Search by triplet (minbias):
+\begin{Verbatim}[fontsize=\tiny]
+TrackChecker output    :      1790/    69548   2.57% (  2.13%) ghosts
+Velo                   :     63170/   242881  26.01% ( 25.26%),       512 (  0.41%) clones, hit eff  67.65% pur  99.12%
+Velo+UT                :     60752/   102595  59.22% ( 57.65%),       480 (  0.40%) clones, hit eff  66.76% pur  99.16%
+Velo+UT, p > 5 GeV     :     40513/    48096  84.23% ( 82.90%),       334 (  0.41%) clones, hit eff  68.22% pur  99.18%
+Velo, not long         :     17208/   175233   9.82% (  9.46%),       150 (  0.44%) clones, hit eff  67.47% pur  98.94%
+Velo+UT, not long      :     14967/    39167  38.21% ( 37.10%),       118 (  0.39%) clones, hit eff  63.89% pur  99.07%
+Velo+UT, not long, p > 5 GeV:      7588/     8743  86.79% ( 86.34%),        60 (  0.40%) clones, hit eff  66.35% pur  99.14%
+Long                   :     45962/    67648  67.94% ( 66.20%),       362 (  0.39%) clones, hit eff  67.72% pur  99.19%
+Long, p > 5 GeV        :     33089/    42621  77.64% ( 75.94%),       274 (  0.41%) clones, hit eff  68.67% pur  99.19%
+Long from B            :        88/      107  82.24% ( 83.06%),         0 (  0.00%) clones, hit eff  66.84% pur  99.12%
+Long from B, p > 5 GeV :        62/       67  92.54% ( 89.99%),         0 (  0.00%) clones, hit eff  68.69% pur  98.75%
+\end{Verbatim}
+
+Performance:
+\begin{itemize}
+\item GTX 1080 Ti: 43 kHz
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cuda HLT1 current sequence}
+\begin{figure}
+\includegraphics[width=300pt]{cuda_hlt_timing_fractions}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Cuda HLT1 pipeline}
+\begin{figure}
+\includegraphics[width=200pt]{cuda_hlt_sequence_pipeline}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Ongoing developments}
+\begin{itemize}
+\item SciFi reconstruction
+\item Muon reconstruction
+\item FPGA project (José Mazorra)
+\end{itemize}
+
+Building a small team
+\begin{itemize}
+\item Join the e-group \emph{lhcb-parallelization}
+\item \url{https://gitlab.cern.ch/lhcb-parallelization/cuda_hlt}
+\item \url{https://twiki.cern.ch/twiki/bin/view/LHCb/GPUStudies}
+\end{itemize}
+\end{frame}
